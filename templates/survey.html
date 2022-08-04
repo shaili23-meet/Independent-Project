@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body>
+    
+    <center>
+
+        <div class="container">
+            <div class="col-md-6">
+            <div id="logbox">
+
+              <form id="signup" method="POST" action="/survey">
+                <h3>Create an Account</h3>
+                <input type="text" name="food" placeholder="What's your favorite food?" class="input pass">
+                <input type="text" name="animal" placeholder="What's your favorite animal?" class="input pass">
+                <input type="text" name="color" placeholder="What's your favorite color?" class="input pass">
+
+                <input type="text" name="hobby" placeholder="What's your favorite hobby?" class="input pass">
+                <input type="text" name="city" placeholder="What's your favorite city?" class="input pass">
+                <input type="text" name="place" placeholder="What's your favorite place?" class="input pass">
+
+                <input type="text" name="drink" placeholder="What's your favorite drink?" class="input pass">
+                <input type="text" name="subject" placeholder="What's your favorite subject?" class="input pass">
+
+                <input type="submit" value="Submit!" class="inputButton"/>
+
+
+              </form>
+              <a href="/signout"><button>signout</button></a>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

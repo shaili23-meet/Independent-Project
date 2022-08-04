@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- CSS only boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+
+</head>
+<body>
+
+    <center>
+
+        <div class="container">
+            <div class="col-md-6">
+            <div id="logbox">
+              <form id="signup" method="POST" action="/add_tweet">
+                <h3><strong>Write a quote</strong></h3>
+                <br>
+                <h3>that represents you the BEST WAY</h3>
+                <input type="text" name='quote' placeholder="Quote" class="input pass">
+                <input type="submit" value="Let's get started!" class="inputButton"/>
+
+
+              </form>
+              <a href="/signout"><button>signout</button></a>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

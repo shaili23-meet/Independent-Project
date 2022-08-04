@@ -1,0 +1,13 @@
+div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+  background-image: url("/static/containerimg.jpeg");
+  border-left: 6px solid #e6ccff;
+  border-right: 6px solid #e6ccff;
+  width: 500px;
+  text-align: center;
+}
+
+body {
+  background-image: url("/static/backimg.png");
+}

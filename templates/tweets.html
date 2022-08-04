@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleQuotes.css') }}">
+</head>
+<body>
+    
+    <center>
+        {% for i in databis.child("Quotes").get().val() %}
+            <div class = "note">
+                <a href="/sameinfo/{{databis.child('Users').child(quote_db[i]['uid']).get().val()['username']}}">
+                <h2><strong>{{databis.child("Quotes").get().val()[i]['quote']}}</strong></h2></a>
+                <h4>User name : {{databis.child("Users").child(quote_db[i]['uid']).get().val()['username']}}</h4>
+            </div>
+        {% endfor %} 
+        <a href="/signout"><button>signout</button></a>
+    </center>
+
+    
+    
+
+    
+</body>
+</html>

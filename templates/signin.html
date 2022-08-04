@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signin</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleNavigationBar.css') }}">
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" href="/">Home Page</a>
+    <a href="signin">Sign In</a>
+    <a href="signup">Sign Up</a>
+  </div>
+
+    <center>
+
+        <div class="container">
+            <div class="col-md-6">
+            <div id="logbox">
+              <form id="signup" method="POST" action="/signin">
+                <h3>Account Login</h3>
+                <input name="password" type="password" placeholder="Password" required="required" class="input pass"/>
+                <input name="email" type="email" placeholder="Email address" class="input pass"/>
+                <input type="submit" value="Sign me in!" class="inputButton"/>
+
+                <a href="/signup">New to the Website?<strong>Sign Up</strong></a>
+
+              </form>
+            </div>
+        </div>
+    </center>
+
+</body>
+</html>

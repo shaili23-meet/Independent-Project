@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleQuotes.css') }}">
+</head>
+<body style= "color:#6600cc; font-family: Lucida Console, Courier New, monospace;">
+
+    <h1>{{login_session_user["fullname"]}} - the same info you have with <strong>{{n}}</strong> is... </h1>
+
+    <br><br><br>
+
+    {% for i in databis.child("Users").get().val() %}
+    
+        {% if databis.child("Users").child(i).get().val()['username'] == n %}
+        
+            {% for j in databis.child("Survey").get().val() %}
+                {% if databis.child("Survey").child(j).get().val()["animal"] == login_session_survey["animal"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["animal"] }}</h2>
+                {% endif %}
+
+                {% if databis.child("Survey").child(j).get().val()["food"] == login_session_survey["food"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["food"] }}</h2>
+                {% endif %}
+
+                {% if databis.child("Survey").child(j).get().val()["color"] == login_session_survey["color"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["color"] }}</h2>
+                {% endif %}
+
+                {% if databis.child("Survey").child(j).get().val()["hobby"] == login_session_survey["hobby"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["hobby"] }}</h2>
+                {% endif %}
+
+                {% if databis.child("Survey").child(j).get().val()["city"] == login_session_survey["city"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["city"] }}</h2>
+                {% endif %}
+
+                {% if databis.child("Survey").child(j).get().val()["place"] == login_session_survey["place"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["place"] }}</h2>
+                {% endif %}
+
+                {% if databis.child("Survey").child(j).get().val()["drink"] == login_session_survey["drink"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["drink"] }}</h2>
+                {% endif %}
+
+                {% if databis.child("Survey").child(j).get().val()["subject"] == login_session_survey["subject"] and databis.child("Survey").child(j).get().val()["uid"] == i%}
+                    <h2>{{login_session_survey["subject"] }}</h2>
+                {% endif %}
+
+                
+
+
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    <br><br><br><br><br>
+
+    <a href="/signout"><button>signout</button></a>
+</body>
+</html>
